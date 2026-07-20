@@ -5,7 +5,7 @@ const Hero = () => {
   return (
 
       <ImageBackground source={require('@/assets/images/prueba_4.png')}
-          resizeMode="cover" className="mx-4 rounded-3xl overflow-hidden bg-background mb-5">
+          resizeMode="cover" className="mx-4 rounded-3xl overflow-hidden bg-background mb-7">
           <View className="flex-row items-center px-5 py-6">
               <View >
                   <Text className="text-2xl font-poppins-semibold leading-8 mb-4">

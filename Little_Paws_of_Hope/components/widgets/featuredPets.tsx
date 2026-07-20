@@ -22,10 +22,10 @@ const FeaturedPets = ({ pets }:Props) => {
 
     <View>
         <View className='flex-row justify-between'>
-          <Text className='font-poppins-semibold text-[18px] mx-4 mb-3'>Mascotas destacadas</Text>
-          <Text className='font-nunito-regular text-primary mr-4 pt-[3px]' >Ver todas</Text>
+          <Text className='font-poppins-semibold text-[17px] mx-4 mb-[2px]'>Mascotas destacadas</Text>
+          <Text className='font-nunito-regular text-primary text-[12px] mr-5 pt-2' >Ver todas</Text>
         </View>
-        <Carousel data={pets}
+        <Carousel  data={pets}
                   ref={ref}
                   renderItem={({item})=> <PetsImage
                       id={item.id}
@@ -36,18 +36,15 @@ const FeaturedPets = ({ pets }:Props) => {
                       image_url={item.image_url}
                   />}
                   width={200}
-                  height={350}
+                  height={300}
                   style={{
                       width:width,
-                      height: 350,
+                      height: 300,
                       justifyContent: 'center',
                       alignItems: 'center'
                   }}
                   defaultIndex={1}
                       />
-
-
-
     </View>
 
       </Skeleton>

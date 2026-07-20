@@ -11,6 +11,7 @@ module.exports = {
         secondary: 'rgb(230,220,220)',
         background: 'rgb(251,233,219)'
 
+
       },
 
       fontFamily:{

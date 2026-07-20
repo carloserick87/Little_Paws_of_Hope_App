@@ -2,9 +2,10 @@ import { View, Text } from 'react-native';
 
 const NearbyPets = () => {
   return (
-    <View>
-      <Text className='font-poppins-semibold text-[18px] mx-4'>Cerca de ti</Text>
-    </View>
+      <View className='flex-row justify-between mt-3'>
+          <Text className='font-poppins-semibold text-[17px] mx-4 mb-[2px]'>Cerca de ti</Text>
+          <Text className='font-nunito-regular text-primary text-[12px] mr-5 pt-2' >Ver todas</Text>
+      </View>
   );
 };
 
