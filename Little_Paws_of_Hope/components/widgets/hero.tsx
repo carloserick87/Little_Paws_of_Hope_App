@@ -8,7 +8,7 @@ const Hero = () => {
           resizeMode="cover" className="mx-4 rounded-3xl overflow-hidden bg-background mb-7">
           <View className="flex-row items-center px-5 py-6">
               <View >
-                  <Text className="text-2xl font-poppins-semibold leading-8 mb-4">
+                  <Text className="text-[19px] font-poppins-semibold leading-8 mb-4">
                       Cada patita{'\n'}merece una{'\n'}segunda{'\n'}oportunidad
                   </Text>
                   <Pressable className="self-start bg-primary rounded-2xl px-5 py-3 active:opacity-80">
