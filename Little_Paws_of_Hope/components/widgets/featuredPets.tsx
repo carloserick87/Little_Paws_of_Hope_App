@@ -5,6 +5,7 @@ import { usePets} from "@/hooks/usePets";
 import { Skeleton } from 'boneyard-js/native';
 import  PetsImage   from '@/components/ui/petsImage'
 import { Pets } from '@/infrastructure/interfaces/pets.interface'
+import ThemedText from "@/components/ui/ThemedText";
 
 
 interface Props{
@@ -22,8 +23,8 @@ const FeaturedPets = ({ pets }:Props) => {
 
     <View>
         <View className='flex-row justify-between'>
-          <Text className='font-poppins-semibold text-[17px] mx-4 mb-[2px]'>Mascotas destacadas</Text>
-          <Text className='font-nunito-regular text-primary text-[12px] mr-5 pt-2' >Ver todas</Text>
+          <ThemedText className='font-poppins-semibold text-[17px] mx-4 mb-[2px]'>Mascotas destacadas</ThemedText>
+          <Text className='font-nunito-regular text-light-primary dark:text-dark-primary text-[12px] mr-5 pt-2' >Ver todas</Text>
         </View>
         <Carousel  data={pets}
                   ref={ref}

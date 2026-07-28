@@ -6,10 +6,16 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { GestureHandlerRootView } from 'react-native-gesture-handler'
 import { queryClient } from '@/services/queryClient';
 import './global.css';
+import {useColorScheme} from "@/hooks/use-color-scheme";
+import {ThemeProvider, DarkTheme, DefaultTheme} from "@react-navigation/native";
+
+import ThemedView from "@/components/ui/ThemedView";
 
 SplashScreen.preventAutoHideAsync();
 
 const RootLayout = () => {
+
+    const colorScheme = useColorScheme();
 
     const [ fontsLoaded, error] = useFonts({
         'Poppins-SemiBold': require('../assets/fonts/Poppins-SemiBold.ttf'),
@@ -28,7 +34,11 @@ const RootLayout = () => {
   return (
       <GestureHandlerRootView style={{ flex: 1 }}>
         <QueryClientProvider client={queryClient}>
-         <Slot />
+           <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
+               <ThemedView>
+                  <Slot />
+               </ThemedView>
+           </ThemeProvider>
         </QueryClientProvider>
       </GestureHandlerRootView>
   )
