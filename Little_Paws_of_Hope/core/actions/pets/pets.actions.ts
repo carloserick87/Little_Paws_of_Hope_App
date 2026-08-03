@@ -1,5 +1,4 @@
 import { petsApi } from "@/core/api/pets-api";
-// import { PetsDB } from '@/infrastructure/interfaces/petsdb-response';
 import { PetsMapper } from '@/infrastructure/mappers/pets.mapper';
 
 

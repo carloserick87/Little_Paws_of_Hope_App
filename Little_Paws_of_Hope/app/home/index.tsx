@@ -7,7 +7,7 @@ import NearbyPets from "@/components/widgets/nearbyPets";
 
 const HomeScreen = () => {
 
-    const { PetsQuery } = usePets();
+    const { PetsQuery, NearbyPetsQuery } = usePets();
 
     const safeArea = useSafeAreaInsets();
   return (
@@ -15,7 +15,7 @@ const HomeScreen = () => {
       <View className='mt-2' style={{ paddingTop: safeArea.top}}>
         <Hero />
         <FeaturedPets pets={ PetsQuery.data ?? []}/>
-        <NearbyPets />
+        <NearbyPets pets={ NearbyPetsQuery.data ?? []} />
       </View>
 
 
