@@ -48,4 +48,4 @@ app-example
 .env
 
 # Claude AI
-.claude
+.claude/
